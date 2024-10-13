@@ -10,11 +10,6 @@
 > This projects uses spring docker compose support. To be able to leverage it during your
 > development, [Docker](https://www.docker.com/) is required.
 
-> [!NOTE]
-> For an improved developer experience, the development configuration of the projects uses the observability stack
-> (Prometheus, Grafana, Loki, Tempo) in combination to docker compose support and spring dev-tools.
-> This will allow you to monitor performance, query logs, follow traces and leverage fast reload times after changes.
-
 1. Clone the backend repo:
 
    ```git clone https://github.com/JavaSoftwareEntwickler/spring-boot-thymeleaf.git```
