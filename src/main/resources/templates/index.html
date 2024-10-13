@@ -18,12 +18,15 @@
 						  <p class="card-text" th:text="${c.descrizione}"></p>
 						  <p class="card-text" >Anno di publicazione <span th:text="${c.anno}"></span></p>
 						  <p>Giudizio <span th:class="'star star-'+${c.giudizio}"></span></p>
-
-						  <a th:href="@{'/carrello/aggiungi/' + ${c.idlibro}}" class="btn btn-primary"><h5 class="card-text" ><strong>Ordina a solo  <span th:text="'€ '+${c.prezzo}"></span></strong> </h5></a>
+						  <p>Prezzo: <span th:text="'€ '+${c.prezzo}"></span></p>
+						  <a th:href="@{'/carrello/aggiungi/' + ${c.idlibro}}" class="btn btn-primary"><h5 class="card-text" ><strong>Aggiungi a carrello</strong> </h5></a>
 					  </article>
 				  </div>
 			  </tr>
 		  </table>
+		  <button  type="button" class="btn btn-link btn-floating mx-1" >
+			  <i class="fa-brands fa-github"></i>
+		  </button>
 	  </div>
   </div>
   <div th:replace="/partial/footer"></div>
