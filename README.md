@@ -14,7 +14,7 @@
 
    ```git clone https://github.com/JavaSoftwareEntwickler/spring-boot-thymeleaf.git```
 
-2. Run the project from the IDE or through maven with ```dev``` profile active and wait for the containers to start:
+2. Run the project from the IDE or through maven and wait for the containers to start:
 
    ```mvn spring-boot:run```
 
