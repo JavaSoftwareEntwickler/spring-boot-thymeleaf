@@ -18,6 +18,6 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         CustomUser userDb = customUserService.getUserByUsername(username);
-        return (userDb == null ) ? null : User.builder().username(userDb.getUsername()).password(userDb.getPassword()).roles(userDb.getRole()).build() ;
+        return (userDb == null ) ? null : User.builder().username(userDb.getUsername()).password(userDb.getPassword()).roles(userDb.getRole().name()).build() ;
     }
 }

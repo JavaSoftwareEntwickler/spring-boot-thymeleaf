@@ -1,5 +1,8 @@
 package com.example.demo.controllers;
 
+import com.example.demo.models.CustomUser;
+import com.example.demo.services.CustomUserServiceImpl;
+import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,6 +18,9 @@ import static com.example.demo.GlobalApp.NOME_SITO_WEB_VALUE;
 public class HomeController {
 	@Autowired
 	private LibroService libroService;
+
+	@Autowired
+	CustomUserServiceImpl customUserService;
 
 	@GetMapping(value = { "/", "/index" })
 	public String index(ModelMap model, HttpSession session) {

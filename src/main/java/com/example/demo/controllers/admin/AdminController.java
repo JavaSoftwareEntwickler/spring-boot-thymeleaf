@@ -5,6 +5,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
@@ -26,6 +27,7 @@ import static com.example.demo.GlobalApp.*;
 @Slf4j
 @Controller
 @Transactional
+@PreAuthorize("hasRole('ADMIN')")
 public class AdminController {
 	@Autowired
 	private LibroService libroService;
