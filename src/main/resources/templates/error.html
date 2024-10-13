@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head th:replace="/partial/head"></head>
+<body>
+<div th:replace="/partial/nav"></div>
+<div class="container">
+    <div class="alert alert-danger" >
+
+       <h1>Opps, qualcosa è andato storto.</h1>
+        <p></p>
+       <p th:text="${message}"></p>
+        <p></p>
+    </div>
+    <div class="col-sm-2">
+        <a href="/index" class="btn border-success">Torna alla Home ...</a>
+    </div>
+</div>
+
+<!-- Contenuti della pagina -->
+<div th:replace="/partial/footer"></div>
+<div th:replace="/partial/script"></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+  <head th:replace="/partial/head"></head>
+  <body>
+  <div th:replace="/partial/nav"></div>
+  <!--  -->
+  <div class="container">
+	  <div class="row">
+		  <table>
+			  <tr th:each="c : ${libri}">
+				  <div class="col-md-3">
+					  <article class="card" style="width: 18rem;" >
+						  <img class="card-img-top" th:src="@{/images/{image} (image=${#strings.isEmpty(c.copertina)}  ? 'default.png' : ${c.copertina})}">
+						  <h4 class="card-title" th:text="${c.titolo}"></h4>
+						  <p class="card-text">
+							  <strong><em th:each="a: ${c.autori}"><span th:text="${a.nome}+ ' ' + ${a.cognome}"></span></em></strong>, <span th:text="${c.genere.nomegenere}"></span>
+						  </p>
+						  <p class="card-text" th:text="${c.descrizione}"></p>
+						  <p class="card-text" >Anno di publicazione <span th:text="${c.anno}"></span></p>
+						  <p>Giudizio <span th:class="'star star-'+${c.giudizio}"></span></p>
+
+						  <a th:href="@{'/carrello/aggiungi/' + ${c.idlibro}}" class="btn btn-primary"><h5 class="card-text" ><strong>Ordina a solo  <span th:text="'€ '+${c.prezzo}"></span></strong> </h5></a>
+					  </article>
+				  </div>
+			  </tr>
+		  </table>
+	  </div>
+  </div>
+  <div th:replace="/partial/footer"></div>
+  <div th:replace="/partial/script"></div>
+  </body>
+</html>

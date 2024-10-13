@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:8.0
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    environment:
+      MYSQL_ROOT_PASSWORD: rootroot
+      MYSQL_DATABASE: mybooksmanager
+      MYSQL_USER: supun
+      MYSQL_PASSWORD: rootroot
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
+
+# when mysql container is healthy, Then start spring app
+#docker exec -it mysql mysql -u supun -rootroot  #login to mysql container shell
