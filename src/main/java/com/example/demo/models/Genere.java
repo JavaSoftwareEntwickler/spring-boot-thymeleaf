@@ -13,6 +13,7 @@ import lombok.Setter;
 @Table(name="generi") // Tabella al plurale
 public class Genere { // classe al singolare
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idgenere; // PK
 	private String nomegenere;
 	private String descrizione;

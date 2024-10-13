@@ -17,6 +17,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 @Table(name = "autori")
 public class Autore {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idautore; // PK
 	private String nome;
 	private String cognome;
