@@ -10,7 +10,7 @@
 > This projects uses spring docker compose support. To be able to leverage it during your
 > development, [Docker](https://www.docker.com/) is required.
 
-1. Clone the backend repo:
+1. Clone the repo:
 
    ```git clone https://github.com/JavaSoftwareEntwickler/spring-boot-thymeleaf.git```
 
