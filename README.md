@@ -1,5 +1,5 @@
-# spring-boot-thymeleaf
-### Full stack project 
+# Full stack project
+### spring-boot and thymeleaf
 
 
 ## Getting started
@@ -9,6 +9,9 @@
 > [!NOTE]
 > This projects uses spring docker compose support. To be able to leverage it during your
 > development, [Docker](https://www.docker.com/) is required.
+
+> [!NOTE]
+> The Java Version required is: 21.
 
 1. Clone the repo:
 
