@@ -2,10 +2,8 @@
 <html lang="it" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head th:replace="/partial/head"></head>
 <body>
-<div th:replace="/partial/nav"></div>
-<!--  -->
-<h6 class="container">
-    <h6 class="row">
+<div class="container">
+    <div class="row">
         <div class="col-md-3"></div>
         <form th:action="@{/login}" method="post" class="card col-md-6">
             <div class="card-body">
@@ -50,7 +48,6 @@
         <div class="col-md-3"></div>
     </div>
 </div>
-<div th:replace="/partial/footer"></div>
 <div th:replace="/partial/script"></div>
 </body>
 </html>
