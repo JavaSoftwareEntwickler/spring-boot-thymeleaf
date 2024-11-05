@@ -38,7 +38,6 @@
 			<groupId>org.thymeleaf.extras</groupId>
 			<artifactId>thymeleaf-extras-springsecurity6</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -55,7 +54,6 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 		<!-- Da aggiungere -->
 		<!-- https://mvnrepository.com/artifact/org.webjars/webjars-locator -->
 		<dependency>
@@ -69,7 +67,6 @@
 			<artifactId>bootstrap</artifactId>
 			<version>5.1.3</version>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.webjars/jquery -->
 		<dependency>
 			<groupId>org.webjars</groupId>
@@ -89,7 +86,6 @@
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
     <!-- Hibernate Validation -->
 		<!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
 		<dependency>
@@ -101,15 +97,25 @@
             <artifactId>lombok</artifactId>
 			<optional>true</optional>
         </dependency>
-		<dependency>
+<!--		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-docker-compose</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
+		</dependency>-->
+		<!-- https://mvnrepository.com/artifact/com.sendgrid/sendgrid-java -->
+		<dependency>
+			<groupId>com.sendgrid</groupId>
+			<artifactId>sendgrid-java</artifactId>
+			<version>4.10.3</version>
 		</dependency>
-    </dependencies>
-
-
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.18.0</version>
+		</dependency>
+	</dependencies>
 	<build>
 		<plugins>
 			<plugin>
@@ -127,5 +133,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

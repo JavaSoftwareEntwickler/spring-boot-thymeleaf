@@ -5,6 +5,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
@@ -36,6 +40,7 @@ public class GenereController {
 
     @RequestMapping("/insert")
     public String inserisciGenere(Genere genere, Model model) {
+
         LocalDate dataInserimento = LocalDate.now();
         model.addAttribute(NOME_SITO_WEB_KEY, NOME_SITO_WEB_VALUE);
         model.addAttribute("dataInserimento", dataInserimento);

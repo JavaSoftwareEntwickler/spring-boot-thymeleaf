@@ -57,7 +57,7 @@ public class AdminController {
 		return "admin/insert";
 	}
 
-	@RequestMapping(value = "/admin/insertBook", method = RequestMethod.POST)
+	@PostMapping(value = "/admin/insertBook")
 	public String insertBook(
 			@Valid @ModelAttribute("libro") Libro libro,
 			BindingResult bindingResult,
@@ -78,9 +78,7 @@ public class AdminController {
 	}
 
 	@RequestMapping("/admin/edit/{idlibro}")
-	public String editLibro(
-			@PathVariable("idlibro") int idlibro,
-			Model model) {
+	public String editLibro(@PathVariable("idlibro") int idlibro, Model model) {
 		model.addAttribute(NOME_SITO_WEB_KEY, NOME_SITO_WEB_VALUE);
 		model.addAttribute("libro", this.libroService.getLibroByidlibro(idlibro));
 		Libro b = this.libroService.getLibroByidlibro(idlibro);
@@ -91,7 +89,7 @@ public class AdminController {
 	}
 
 	// vincolo tra modello e visualizzazione (htlm abbiamo avete un th:objeckt)
-	@RequestMapping(value = "/admin/updateBook", method = RequestMethod.POST)
+	@PostMapping(value = "/admin/updateBook")
 	public ModelAndView updateBook(
 			@ModelAttribute(value = "libro") Libro book,
 			@RequestParam(value = "file", required = false) @Valid MultipartFile file,
@@ -120,7 +118,7 @@ public class AdminController {
 		return "admin/delete";
 	}
 
-	@RequestMapping(value = "/admin/deleteLibro", method = RequestMethod.POST)
+	@PostMapping(value = "/admin/deleteLibro")
 	public ModelAndView deleteLibro(@ModelAttribute(value = "libro") Libro book) {
 		book.setIdgenere(1);
 		libroService.deleteLibro(book);

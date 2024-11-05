@@ -4,8 +4,8 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-3"></div>
-        <form th:action="@{/login}" method="post" class="card col-md-6">
+        <div class="col-md-4"></div>
+        <form th:action="@{/login}" method="post" class="card col-md-4">
             <div class="card-body">
                 <h6 class="card-title mb-4" th:if="${param.error}">Invalid username and password.</h6>
                 <h6 class="card-title mb-4" th:if="${param.logout}">You have been successfully logged out.</h6>
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </form>
-        <div class="col-md-3"></div>
+        <div class="col-md-4"></div>
     </div>
 </div>
 <div th:replace="/partial/script"></div>
